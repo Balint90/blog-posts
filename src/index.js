@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import profile from "./image/blank-profile-picture.webp";
 
 const App = () => {
     return (
         <div className="ui comments">
             <div className="comment">
                 <a href="/" className="avatar">
-                    <img src="" alt="profile picture" />
+                    <img src={profile} alt="profile picture" />
                 </a>
                 <div className="content">
                     <a href="/" className="author">
