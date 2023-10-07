@@ -1,64 +1,41 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import profile from "./image/blank-profile-picture.webp";
+import profile1 from "./image/blank-profile-picture.webp";
+import profile2 from "./image/blank-profile-picture.webp";
+import profile3 from "./image/blank-profile-picture.webp";
+import SingleComment from "./SingleComment"
+import UserCard from "./UserCard";
 
 const App = () => {
     return (
         <div className="ui comments">
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img src={profile} alt="profile picture" />
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sarah
-                    </a>
-                    <div className="metadata">
-                        <span className="date">
-                            Today at 5:00pm
-                        </span>
-                    </div>
-                    <div className="text">
-                        it's amazing
-                    </div>
-                </div>
-            </div>
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img src={profile} alt="profile picture" />
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sarah
-                    </a>
-                    <div className="metadata">
-                        <span className="date">
-                            Today at 5:00pm
-                        </span>
-                    </div>
-                    <div className="text">
-                        it's amazing
-                    </div>
-                </div>
-            </div>
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img src={profile} alt="profile picture" />
-                </a>
-                <div className="content">
-                    <a href="/" className="author">
-                        Sarah
-                    </a>
-                    <div className="metadata">
-                        <span className="date">
-                            Today at 5:00pm
-                        </span>
-                    </div>
-                    <div className="text">
-                        it's amazing
-                    </div>
-                </div>
-            </div>
+            <UserCard>
+                Hello my name is Balint and I live in Komló.
+            </UserCard>
+            <UserCard>
+                <SingleComment 
+                    name="Sarah"
+                    date='Today at 5:00pm'
+                    picture={profile1}
+                    comment="it's amazing" 
+                />
+            </UserCard>
+            <UserCard>
+                <SingleComment 
+                    name="Joe"
+                    date='Today at 6:00pm'
+                    picture={profile2}
+                    comment="great job" 
+                />
+            </UserCard>
+            <UserCard>
+                <SingleComment 
+                    name="Smith"
+                    date='Today at 7:00pm'
+                    picture={profile3}
+                    comment='thanks'
+                />
+            </UserCard>
         </div>
     )
 }
