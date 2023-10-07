@@ -1,11 +1,10 @@
 import React from "react";
 
 const UserCard = (props) => {
-    console.log(props)
     return (
     <div className="ui card">
         <div className="content">
-            <div className="header">Alex Tancredi</div>
+            <div className="header">UserCard component</div>
             <div className="description">
                 { props.children }
             </div>
